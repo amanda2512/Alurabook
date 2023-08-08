@@ -12,85 +12,133 @@
 </head>
 
 <body>
-  
+    <!-- vamos criar uma tag <input> do tipo checkbox dentro
+    da nossa primeira tag <div>. Esse input cria uma caixa de seleção que detecta e guarda a ação de clique.-->
     <header class="cabecalho">
         
         <div class="container">
             <input type="checkbox" id="menu" class="container__botao">
-    
+    <!-- criaremos uma tag <label> que envolverá a tag <span>, ou seja, nosso menu hambúrguer.
+    A label funciona para associar todos os elementos dentro dele por meio da propriedade id.-->
             <label for="menu" class="container__rotulo">
                 <span class="cabecalho__menu-hamburguer container__imagem"></span>
 
                 
             </label>                
 
-     
+    <!-- Agora que conseguimos detectar a ação de clique, precisamos criar a
+    nossa lista. Podemos construir dois tipos: as listas ordenadas e as não
+    ordenadas. A lista ordenada é numerada, enquanto a não ordenada é
+    marcada com bolinhas, chamadas bullets. Vamos seguir com a lista não
+    ordenada utilizando a tag <ul>.-->   
         
                 <ul class="lista-menu">
-                        <li class="lista__menu">
-                            <a href="#" class="lista-menu__link">Programaçao</a></li>>
+                        <li class="lista-menu__titulo">Categorias</li>
+
                         <li class="lista-menu__item">
-                            <a href="#" class="lista-menu__link">Front-end</a></li>
+                            <a href="#" class="lista-menu__link">Programação</a>
+                        </li>
+
                         <li class="lista-menu__item">
-                            <a href="#" class="lista-menu__link">Infraestrutura</a></li>
+                            <a href="#" class="lista-menu__link">Front-end</a>
+                        </li>
+
                         <li class="lista-menu__item">
-                            <a href="#" class="lista-menu__link">Business</a></li>                  
+                            <a href="#" class="lista-menu__link">Infraestrutura</a>
+                        </li>
+
                         <li class="lista-menu__item">
-                            <a href="#" class="lista-menu__link">Design & UX</a></li>
+                            <a href="#" class="lista-menu__link">Business</a>
+                        </li>
                         
-              </ul> 
+                        <li class="lista-menu__item">
+                            <a href="#" class="lista-menu__link">Design & UX</a>
+                        </li>
+                        
+                </ul> 
                   
 
-           <li class="opcoes__item"><a href="#" class="opcoes"__link">Favoritos</a></li>
-           <li class="opcoes__item"><a href="#" class="opcoes"__link">Minha estante</a></li>
-        </ul>
+            <a href="#"><img class="container__imagem" src="img/Logo.svg" alt="logo alura books"></a>
+            <h1 class="container__titulo"><b class="container__titulo--negrito">Alura</b>Books</h1>
+            </div>
 
+            <!--   ALTERAÇÃO 27-07-->
+            <ul class="opcoes">
+
+                <input type="checkbox" id="opcoes-menu" class="opcoes__botao">
+                <label for="opcoes-menu" class="opcoes__rotulo">
+                    <li class="opcoes__item">Categorias</li>
+                </label>
+
+                <ul class="lista__menu">
+                    <li class="lista-menu__item">
+                        <a href="#" class="lista-menu__link">Programação</a></li>
+                    <li class="lista-menu__item">
+                        <a href="#" class="lista-menu__link">Front-end</a></li>
+                    <li class="lista-menu__item">
+                        <a href="#" class="lista-menu__link">Infraestrutura</a></li>
+                    <li class="lista-menu__item">
+                        <a href="#" class="lista-menu__link">Business</a></li>
+                    <li class="lista-menu__item">
+                        <a href="#" class="lista-menu__link">Design & UX</a></li>
+                </ul>    
+
+                <li class="opcoes__item"><a href="#" class="opcoes__link">Favoritos</a></li>
+                <li class="opcoes__item"><a href="#" class="opcoes__link">Minha estante</a></li>
+            </ul>
 
             <div class="container">
                 <a href="#" class="container__link">
-                    <img class="container__imagem container__imagem--coracao" src="img/favoritos.svg" alt="meus favoritos"></a>
-                <a href="#"> class="container__link">
-                    <img class="container__imagem"  src="img/Compras.svg" alt="Carrinho de compras">
+                    <img class="container__imagem container__imagem--coracao" src="img/Favoritos.svg" alt="Meus favoritos"></a>
+                <a href="#" class="container__link">
+                    <img class="container__imagem" src="img/Compras.svg" alt="Carrinho de compras">
                     <p class="container__texto">Minha sacola</p>
                 </a>
                 <a href="#" class="container__link">
-                 <img class="container__imagem" src="img/usuario.svg" alt="meu perfil">
-                <p class="container__texto">Meu perfil</p>
+                    <img class="container__imagem" src="img/Usuario.svg" alt="meu perfil">
+                    <p class="container__texto">Meu perfil</p>
                 </a>
-            </div>       
-        </header>
+            </div>
+     </header>
+            <!--   ACIMA ALTERAÇÃO 27-07-2023-->
 
-               <section class="banner">
-                   <h2 class="banner__titulo">ja sabe por ondecomeçar?</h2>
-                   <p class="banner__texto">Encontre em nossaestante o que precisa para seu desenvolvimento!</p>
-                   <input type="search" class="banner__pesquisa" placeholder="qual sera sua proxima leitura?">
-               </section>section>
+ <!--   ALTERAÇÃO 01-08-->
 
-               <section class="carrossel">
-                   <h2 class="carrossel__titulo">novos lançamentos</h2>
+            <section class="banner">
+                <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+                <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
+                <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+            </section>
+    
+            <!-- 1º carrosel -->
+            <section class="carrossel">
+                <h2 class="carrossel__titulo">Novos lançamentos</h2>
+    
+                <!-- Slider main container -->
+                <div class="carrossel__container">
+                    
+                    <div class="swiper">
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="img/livros/ApacheKafka.svg" alt="livro sobre apache ApacheKafka"></div>
+                            <div class="swiper-slide"><img src="img/livros/Liderança.svg" alt="livro sobre liderança"></div>
+                            <div class="swiper-slide"><img src="img/livros/Javascript.svg" alt="livro sobre javascript"></div>
+                            <div class="swiper-slide"><img src="img/livros/Guia Front-end.svg" alt="livro sobre Front-end"></div>
+                            <div class="swiper-slide"><img src="img/livros/Portugol.svg" alt="livro sobre portugol"></div>
+                            <div class="swiper-slide"><img src="img/livros/Acessibilidade.svg" alt="livro sobre Acessibilidade web"></div>
+                        </div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
 
-                   <div class="swiper">
-                       <div class="swiper-pagination"></div>
-                       <div class="swiperwrapper">
-                           <div class="swiperalide"><img src="img/livros/apachekafka.svg" alt="livro sobre apache apachekfka"></div>
-                           <div class="swiperalide"><img src="img/livros/lierança.svg" alt="livro sobre liderança"></div>
-                           <div class="swiperalide"><img src="img/livros/javascript.svg" alt="livro sobre javascript"></div>
-                           <div class="swiperalide"><img src="img/livros/guia frost-end.svg" alt="livro sobre front-end"></div>
-                           <div class="swiperalide"><img src="img/livros/portugol.svg" alt="livro sobre portugol"></div>
-                           <div class="swiperalide"><img src="img/livros/acessibilidade.svg" alt="livro sobre acessibilidade web"></div>
-                       </div>
-                       <div class="swiper-button-prev"></div>
-                       <div class="swiper-button-prev"></div>
-                   </div> 
-
-
-
-
-
+            <!--   ACIMA ALTERAÇÃO 01-08-2023-->
 
         
             
 </body>
 </html>
-        
-            
